@@ -1,0 +1,14 @@
+>>> class Person:
+...   name = "V"
+...   @staticmethod
+...   def display():
+...     print Person.name
+... 
+>>> Person.name
+'V'
+>>> Person.display()
+V
+>>> 
+
+For version 2.7, we need the @staticmethod decorator
+

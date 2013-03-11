@@ -1,0 +1,40 @@
+test.data
+first_name,last_name
+"Bashi","Boozook"
+
+In [1]: import csv
+In [2]: import json
+In [3]: f = open('test.data','r')
+In [4]: reader = csv.DictReader(f)
+In [5]: out = json.dumps([row for row in reader])
+
+In [6]: print "JSON parsed!"
+JSON parsed!
+
+In [8]: f = open('test.1','w')
+In [9]: f.write(out)
+In [10]: print "JSON saved!"
+JSON saved!
+
+test.1
+{ first_name: "Bashi", last_name: "Boozook" }
+
+---------------------------------------------------------
+Note:
+
+In [16]: for r in reader:
+   ...:     print r
+   ...:     
+{'first_name': 'Bashi', 'last_name': 'Boozook'}
+
+In [17]: r
+Out[7]: {'first_name': 'Bashi', 'last_name': 'Boozook'}
+
+In [18]: r['first_name']
+Out[18]: 'Bashi'
+
+The program migrate the csv data to a one-level JSON hierarchy.
+To migrate to a nested JSON hierarchy, you need to work out the JSON
+hierarchy you want and customize the JSON output starting from step[4] 
+
+

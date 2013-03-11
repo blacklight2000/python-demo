@@ -1,0 +1,38 @@
+In [13]: class A(list):
+   ....:     def push(n):
+   ....:         append(n)
+   ....:         
+
+In [14]: A.p
+A.pop   A.push  
+
+In [23]: b = [1,2,3]
+
+In [25]: a = A(b)
+
+In [26]: a
+Out[26]: [1, 2, 3]
+
+In [27]: a.p
+a.pop   a.push  
+
+-----------------------------------------
+
+In [12]: class S(str):
+    @staticmethod
+    def greeting():
+      print "hello"
+   ....:       
+
+In [13]: b
+Out[13]: 'Hello'
+
+In [14]: a = S(b)
+
+In [15]: a.greeting()
+hello
+
+In [16]: a.c
+a.capitalize  a.center      a.count
+
+

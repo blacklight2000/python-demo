@@ -1,0 +1,22 @@
+new-host-3:scripts vphuvan$ python
+Python 2.7.1 (r271:86832, Jun 16 2011, 16:59:05) 
+[GCC 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> family = '{ "family": { "parents": { "mother": "a", "father":"b" },"children": { "first": "c", "second": "d", "third": "e" }}}'
+>>> family['family']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: string indices must be integers, not str
+>>> family = { "family": { "parents": { "mother": "a", "father":"b" },"children": { "first": "c", "second": "d", "third": "e" }}}
+>>> family['family']
+{'parents': {'father': 'b', 'mother': 'a'}, 'children': {'second': 'd', 'third': 'e', 'first': 'c'}}
+>>> family['family']['parents']
+{'father': 'b', 'mother': 'a'}
+>>> family['family']['parents']['mother']
+'a'
+>>> family['family']['children']
+{'second': 'd', 'third': 'e', 'first': 'c'}
+>>> family['family']['children']['second']
+'d'
+>>> 
+

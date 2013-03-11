@@ -1,0 +1,24 @@
+n [2]: class A:
+    @classmethod
+    def greeting(cls):
+        print "Hello"
+   ...:     
+
+n [4]: A.greeting()
+Hello
+
+In [6]: class B(A):
+    @classmethod
+    def greetings(cls):
+      print "Hellos"
+   ...:       
+
+In [7]: A.greeting()
+Hello
+
+In [8]: B.greeting()
+Hello
+
+In [9]: B.greetings()
+Hellos
+

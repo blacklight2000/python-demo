@@ -1,0 +1,20 @@
+n [12]: class A:
+    h = 0
+    @classmethod
+    def sell(cls,amount=0):
+        cls.h = cls.h + amount
+   ....:         
+
+In [13]: A.h
+Out[13]: 0
+
+In [14]: A.sell(3)
+
+In [15]: 
+
+In [15]: A.h
+Out[15]: 3
+
+
+Note: syntax is valid for Python 2.7
+

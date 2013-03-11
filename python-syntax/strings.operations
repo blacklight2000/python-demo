@@ -1,0 +1,62 @@
+# Reverse a string, not replacing value of original string
+
+In [1]: a = 'abcde'
+
+In [2]: a[::-1]
+Out[2]: 'edcba'
+
+In [3]: b = a[::-1]
+
+In [4]: b
+Out[4]: 'edcba'
+
+In [5]: a
+Out[5]: 'abcde'
+
+
+# Reverse a string, updating value of original string
+
+In [1]: a = 'abcde'
+
+In [2]: a = a[::-1]
+
+In [3]: a
+Out[3]: 'edcba'
+
+
+# Get last character of string
+
+In [1]: a = 'abcde'
+
+In [2]: a[-1]
+Out[2]: 'e'
+
+
+# list string as character array
+
+In [1]: a = 'abcde'
+
+In [2]: list(a)
+Out[2]: ['a', 'b', 'c', 'd', 'e']
+
+
+# Expand a string as a list of characters, sort this list then sort it in reverse order
+
+In [1]: a = 'adcbe'			# original string
+
+In [2]: list(a)				# create list from original string
+Out[2]: ['a', 'd', 'c', 'b', 'e']
+
+In [3]: list(a)[::1]			# create list and sort it
+Out[3]: ['a', 'd', 'c', 'b', 'e']
+
+In [4]: list(a)[::1][::-1]		# create list, then sort it and then sort it in reverse order
+Out[4]: ['e', 'b', 'c', 'd', 'a']
+
+In [5]: list(a)[::-1]			# create list then sort it in reverserse order
+Out[5]: ['e', 'b', 'c', 'd', 'a']
+
+In [6]: a				# original string is unchange
+Out[6]: 'adcbe'
+
+ 

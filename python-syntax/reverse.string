@@ -1,0 +1,51 @@
+In a[1]: a  = ''
+
+In a[2]: for i in range(len(string)):
+         a = a +  string[len(string)-1 -i]
+
+---------------------------------------
+In a[1}: __builtins__
+Out [1]: <module '__builtin__' (built-in)>
+
+In [2]: dir(__builtins__)
+Out[2]: ...'reversed'
+
+In [4]: reversed(a)
+Out[4]: <reversed at 0x103e6e0d0>
+
+In [5]: ''.join(reversed(a))
+Out[5]: 'cba'
+--------------------------------------
+
+In [6]: nums = range(1,10)
+
+In [7]: nums
+Out[7]: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [8]: nums[2:5]
+Out[8]: [3, 4, 5]
+
+
+In [10]: nums[::-1]
+Out[10]: [9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+In [11]: a[::-1]
+Out[11]: 'cba'
+
+--------------------------------------------
+
+In [1]: a = 'acedb'
+
+In [3]: sorted(a)
+Out[3]: ['a', 'b', 'c', 'd', 'e']
+
+In [12]: sorted(a)[::-1]
+Out[12]: ['e', 'd', 'c', 'b', 'a']
+
+n [18]: ''.join(sorted(a))
+Out[18]: 'abcde'
+
+In [19]: ''.join(sorted(a))[::-1]
+Out[19]: 'edcba'
+
+

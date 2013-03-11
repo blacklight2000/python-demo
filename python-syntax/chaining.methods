@@ -1,0 +1,35 @@
+n [33]: class A:
+  sum = 0
+  @classmethod
+  def sigma(self,i):
+    self.sum = self.sum + i
+    print self.sum
+    return self
+   ....: 
+
+In [34]: x = A
+
+In [35]: x.sigma(0)
+0
+Out[35]: __main__.A
+
+In [36]: x.sigma(0).sigma(1)
+0
+1
+Out[36]: __main__.A
+
+In [37]: x.sigma(0).sigma(1).sigma(2)
+1
+2
+4
+Out[37]: __main__.A
+
+In [38]: x.sigma(0).sigma(1).sigma(2).sigma(3)
+4
+5
+7
+10
+
+In [41]: x.sum
+Out[41]: 10
+

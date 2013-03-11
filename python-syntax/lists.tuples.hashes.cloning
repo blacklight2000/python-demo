@@ -1,0 +1,117 @@
+# clone a list to a list, method 1:
+
+In [1]: a = [1,4,3,3,5]
+
+In [2]: b = a[:]
+
+In [3]: b
+Out[3]: [1, 4, 3, 3, 5]
+
+
+# clone a list to a list, method 2:
+
+
+In [1]: a
+Out[1]: [1, 4, 3, 2, 5]
+
+In [2]: import copy 
+
+In [3]: b = copy.copy(a)
+
+In [4]: b
+Out[4]: [1, 4, 3, 2, 5]
+
+
+# clone a list to a list, method 3:
+
+In [1]: a
+Out[1]: [1, 4, 3, 2, 5]
+
+In [2]: import copy
+
+In [3]: b = copy.deepcopy(a)
+
+In [4]: b
+Out[3]: [1, 4, 3, 2, 5]
+
+
+# clone an array to a tuple
+
+In [1]: a
+Out[1]: [1, 4, 3, 2, 5]
+
+In [2]: b = tuple(a)
+
+In [3]: b
+Out[3]: (1, 4, 3, 2, 5)
+
+
+# Clone a tuple to a tuple, Method 1
+
+In [1]: a = (1,4,3,2,5)
+
+In [2]: import copy
+
+In [3]: b = copy.copy(a)
+
+In [4]: b
+Out[4]: (1, 4, 3, 2, 5)
+
+
+# Clone a tuple to a tuple, Method 2
+
+In [1]: a = (1,4,3,2,5)
+
+In [2]: import copy
+
+In [3]: b = copy.deepcopy(a)
+
+In [4]: b
+Out[4]: (1, 4, 3, 2, 5)
+
+
+# Clone a tuple to an array, Method 1
+
+In [1]: a = (1,4,3,2,5)
+
+In [2: a
+Out[2]: (1, 4, 3, 2, 5)
+
+In [3]: b = a[:]
+
+In [4]: b
+Out[4]: (1, 4, 3, 2, 5)
+
+
+# Clone from a hash to a hash, Method 1
+
+In [1]: a = { 'first':1, 'second':2,'third':3 }
+
+In [2]: a
+Out[2]: {'first': 1, 'second': 2, 'third': 3}
+
+In [3]: import copy
+
+In [4]: b = copy.copy(a)
+
+In [5]: b
+Out[5]: {'first': 1, 'second': 2, 'third': 3}
+
+
+# Clone from a hash to a hash, Method 1
+
+In [1]: a = { 'first':1, 'second':2,'third':3 }
+
+In [2]: a
+Out[2]: {'first': 1, 'second': 2, 'third': 3}
+
+In [3]: import copy
+
+In [4]: b = copy.deepcopy(a)
+
+In [5]: b
+Out[5]: {'first': 1, 'second': 2, 'third': 3}
+
+
+# reverse an array without changing it
+
