@@ -1,0 +1,22 @@
+In [1]: import re
+
+In [2]: match = re.search('(\d+)\s*(\w+)\s*(\w+)','1234 master sergeant')
+
+In [3]: match.groups()
+Out[3]: ('1234', 'master', 'sergeant')
+
+In [4]: match = re.search('(\d+).*?(\w+).*?(\w+)','1234 master sergeant')
+
+In [5]: match.groups()
+Out[5]: ('1234', 'master', 'sergeant')
+
+In [6]: match = re.search('(\d+).*?(?:\w+).*?(\w+)','1234 master sergeant')
+
+In [7]: match.groups()
+Out[7]: ('1234', 'sergeant')
+
+In [12]: match = re.search('(\d+).*?(\w+)','1234 master sergeant')
+
+In [13]: match.groups()
+Out[13]: ('1234', 'master')
+

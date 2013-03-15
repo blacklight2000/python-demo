@@ -1,0 +1,133 @@
+In [1]: str_original = "The. Fox, juMpEd/ oVer@ THE. #lioN"
+
+In [2]: str_lower_case = str_original.lower()
+
+In [3]: str_lower_case
+Out[3]: 'the. fox, jumped/ over@ the. #lion'
+
+In [4]: import re
+
+In [5]: str_cleaned_up = re.sub('\W','',str_lower_case)
+
+In [6]: str_cleaned_up
+Out[6]: 'thefoxjumpedoverthelion'
+
+In [7]: set1 = set(str_cleaned_up)
+
+In [8]: set1
+Out[8]: 
+set(['e',
+     'd',
+     'f',
+     'i',
+     'h',
+     'j',
+     'm',
+     'l',
+     'o',
+     'n',
+     'p',
+     'r',
+     'u',
+     't',
+     'v',
+     'x'])
+
+In [9]: total_count = 0
+
+In [10]: total_count
+Out[10]: 0
+
+In [11]: for e in set1:
+   ....:     total_count += 0
+   ....:     
+KeyboardInterrupt
+
+In [11]: hash = {}
+
+In [12: for e in set1:
+    total_count += str_lower_case.count(e)
+    hash[e] = str_lower_case.count(e)
+   ....:     
+
+In [13]: hash
+Out[13]: 
+{'d': 1,
+ 'e': 4,
+ 'f': 1,
+ 'h': 2,
+ 'i': 1,
+ 'j': 1,
+ 'l': 1,
+ 'm': 1,
+ 'n': 1,
+ 'o': 3,
+ 'p': 1,
+ 'r': 1,
+ 't': 2,
+ 'u': 1,
+ 'v': 1,
+ 'x': 1}
+
+In [14]: total_count
+Out[14]: 27
+
+In [15]: sorted(hash,key=hash.__getitem__,reverse=True)
+Out[15]: 
+['e',
+ 'o',
+ 'h',
+ 't',
+ 'd',
+ 'f',
+ 'i',
+ 'j',
+ 'm',
+ 'l',
+ 'n',
+ 'p',
+ 'r',
+ 'u',
+ 'v',
+ 'x']
+
+In [16]: for e in sorted(hash,key=hash.__getitem__,reverse=True):
+   ....:     print e,' ',hash[e]
+   ....:     
+e   4
+o   3
+h   2
+t   2
+d   1
+f   1
+i   1
+j   1
+m   1
+l   1
+n   1
+p   1
+r   1
+u   1
+v   1
+x   1
+
+In [17]: for e in sorted(hash,key=hash.get,reverse=True):
+    print e,' ',hash[e]
+   ....:     
+e   4
+o   3
+h   2
+t   2
+d   1
+f   1
+i   1
+j   1
+m   1
+l   1
+n   1
+p   1
+r   1
+u   1
+v   1
+x   1
+
