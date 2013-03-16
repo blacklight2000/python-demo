@@ -1,0 +1,47 @@
+In [1]: class Juror:
+    def __init__(self,name,occupation,gender,race):
+        self.name,self.occupation,self.gender,self.race = name, occupation,  gender, race
+    def __repr__(self):
+        return repr((self.name,self.occupation,self.gender,self.race))
+   ...:     
+
+In [2]: jurors = [
+Juror('Victoria','nurse','F','H'),
+Juror('Elise','doctor','F','W'),
+Juror('Erika','nurse','F','B'),
+Juror('Olga','waitress','F','W'),
+Juror('Pete','lawyer','M','A'),
+Juror('David','teacher','M','A')
+]
+
+In [3]: jurors
+Out[3]: 
+[('Victoria', 'nurse', 'F', 'H'),
+ ('Elise', 'doctor', 'F', 'W'),
+ ('Erika', 'nurse', 'F', 'B'),
+ ('Olga', 'waitress', 'F', 'W'),
+ ('Pete', 'lawyer', 'M', 'A'),
+ ('David', 'teacher', 'M', 'A')]
+
+In [4]: import operator
+
+In [5]: sorted(jurors,key=operator.attrgetter('occupation','name'))
+Out[5]: 
+[('Elise', 'doctor', 'F', 'W'),
+ ('Pete', 'lawyer', 'M', 'A'),
+ ('Erika', 'nurse', 'F', 'B'),
+ ('Victoria', 'nurse', 'F', 'H'),
+ ('David', 'teacher', 'M', 'A'),
+ ('Olga', 'waitress', 'F', 'W')]
+
+In [6]: sorted(jurors,key=operator.attrgetter('occupation','name'),reverse=True)
+Out[6]: 
+[('Olga', 'waitress', 'F', 'W'),
+ ('David', 'teacher', 'M', 'A'),
+ ('Victoria', 'nurse', 'F', 'H'),
+ ('Erika', 'nurse', 'F', 'B'),
+ ('Pete', 'lawyer', 'M', 'A'),
+ ('Elise', 'doctor', 'F', 'W')]
+
+
+
