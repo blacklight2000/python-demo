@@ -2,6 +2,7 @@ import unittest
 from fibonacci import *
 
 class FibonacciTest(unittest.TestCase):
+    msg = "Input to fibonacci sequence must be a non-negative integer"
 
     def testCase1(self):
         self.assertEqual(6765, Case1.fibonacci(20), "Case1 unit test")
