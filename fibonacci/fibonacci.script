@@ -1,0 +1,26 @@
+In [16]: def F(n):
+    f = [0,1]
+    if n == 0:
+        return f[0]
+    elif n == 1:
+        return f[1]
+    else:
+        return F(n-1) + F(n-2)
+   ....:     
+
+
+In [19]: def F(n):
+    f = [0,1]
+    if n == 0:
+        return f[0]
+    elif n ==1:
+        return f[1]
+    else:
+        for i in range(1,n):
+            f[0], f[1] = f[1],f[0]+f[1]
+        return f[1]
+   ....:     
+
+In [20]: F(0)
+Out[20]: 0
+
