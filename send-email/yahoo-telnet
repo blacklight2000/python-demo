@@ -1,0 +1,34 @@
+new-host-2:send-email xxxman$ telnet smtp.mail.yahoo.com 587
+Trying 98.136.185.95...
+Connected to smtp.mail.us.am0.yahoodns.net.
+Escape character is '^]'.
+220 smtp220.mail.gq1.yahoo.com ESMTP
+ehlo
+250-smtp220.mail.gq1.yahoo.com
+250-AUTH LOGIN PLAIN XYMCOOKIE
+250-PIPELINING
+250-SIZE 41697280
+250 8BITMIME
+auth login
+334 VXNlcm  <-- encoded request for encoded username
+dnBod       <-- encoded username supplied
+334 UGF     <-- encoded request for encoded password
+bGl         <-- encoded password supplied
+235 OK, go ahead
+mail from: <xxxman@yahoo.com>
+250 OK , completed
+rcpt to: <xxxman@yahoo.com>
+250 OK , completed
+data
+From: XXX Man<xxxman@yahoo.com>
+To: <xxxmann@yahoo.com>
+Subject: thia is a test
+
+Whaaat?354 Start Mail. End with CRLF.CRLF
+
+.
+250 OK , completed
+quit
+221 Service Closing transmission
+Connection closed by foreign host.
+

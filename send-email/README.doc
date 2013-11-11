@@ -1,0 +1,4 @@
+I wrote these custom programs to send cuutom email messages with 0,1,2 and n attachments through the yahoo and gmail servers.
+
+I won't do this again: I have had with the idiosyncrasies of these mail servers and I will be using send sendgrid in the future.
+

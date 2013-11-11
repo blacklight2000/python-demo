@@ -1,0 +1,16 @@
+In [1]: def gf():
+    a = range(5,15,1)
+    for ai in a:
+        if (ai % 2 == 0):
+            yield ai
+   ...:      
+
+In [2]: b =[]
+
+In [3]: for value in gf():
+    b.append(value)
+   ....:     
+
+In [4]: b
+Out[12]: [6, 8, 10, 12, 14]
+

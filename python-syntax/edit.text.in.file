@@ -1,0 +1,24 @@
+In [1]: import re
+
+In [2]: import os
+
+In [3]: file = "gmail-2-attachment.py"
+
+In [4]: inf= open(file,"r")
+
+In [5]: lines = inf.readlines()
+
+In [6]: for l in lines:
+    l=re.sub(r'vphuvan','xxxman',l)
+    l=re.sub(r'password`,'PASSWORD',l)
+    newlines.append(l)
+   ....:     
+
+In [7]: inf.close()
+
+In [8]: out=open(file+"s","w")
+
+In [9]: out.writelines(newlines)
+
+In [11]: out.close()
+

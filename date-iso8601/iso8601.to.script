@@ -1,0 +1,98 @@
+In [1]: import dateutil.parser
+
+In [2]: from datetime import datetime
+
+In [3]: datetime.now()
+Out[3]: datetime.datetime(2013, 4, 27, 0, 44, 22, 359311)
+
+In [4]: d = datetime.now()
+
+In [5]: d
+Out[5]: datetime.datetime(2013, 4, 27, 0, 45, 12, 238689)
+
+In [6]: d.year
+Out[6]: 2013
+
+In [7]: d.second
+Out[7]: 12
+
+In [8]: d.timetz()
+Out[8]: datetime.time(0, 45, 12, 238689)
+
+In [9]: datetime.now().isoformat()
+Out[9]: '2013-04-27T06:59:00.866615'
+
+In [10]: datetime(2009,12,1).isoformat()
+Out[10]: '2009-12-01T00:00:00'
+
+In [11]: datetime(2009,12,1,12,34,05).isoformat()
+Out[11]: '2009-12-01T12:34:05'
+
+In [12]: datetime(2009,12,1,12,34,05,).isoformat()
+Out[12]: '2009-12-01T12:34:05'
+
+In [13]: datetime(2009,12,1,12,34,05).isoformat()
+Out[13]: '2009-12-01T12:34:05'
+
+In [14]: datetime(2009,12,1,12,34,05,0).isoformat()
+Out[14]: '2009-12-01T12:34:05'
+
+In [15]: datetime(2009,12,1,12,34,05,0,None).isoformat()
+Out[15]: '2009-12-01T12:34:05'
+
+In [16]: datetime.now()
+Out[16]: datetime.datetime(2013, 4, 27, 7, 16, 36, 760607)
+
+In [17]: datetime.now().second
+Out[17]: 21
+
+In [18]: datetime.now()
+Out[18]: datetime.datetime(2013, 4, 27, 7, 23, 41, 19202)
+
+In [19]: datetime(2009,12,1,12,34,05,0,None).isoformat()
+Out[19]: '2009-12-01T12:34:05'
+
+In [20]: import time
+
+In [21]: time.localtime()
+Out[21]: time.struct_time(tm_year=2013, tm_mon=4, tm_mday=27, tm_hour=7, tm_min=26, tm_sec=37, tm_wday=5, tm_yday=117, tm_isdst=1)
+
+In [22]: time.timezone
+Out[22]: 18000
+
+In [23]: time.tzname
+Out[23]: ('EST', 'EDT')
+
+In [24]: datetime(2009,12,1,12,34,05,0,None).isoformat('T')
+Out[24]: '2009-12-01T12:34:05'
+
+In [25]: str.format('{0:+06.2f}', -float(time.timezone) / 3600).replace('.', ':')
+Out[25]: '-05:00'
+
+In [26]: time.timezone
+Out[26]: 18000
+
+In [27]: tz = str.format('{0:+06.2f}', -float(time.timezone) / 3600).replace('.', ':')
+
+In [28]: tz
+Out[28]: '-05:00'
+
+In [29]: datetime(2009,12,1,12,34,05,0,None).isoformat('T') 
+Out[29]: '2009-12-01T12:34:05'
+
+In [30]: datetime(2009,12,1,12,34,05,0,None).isoformat('T') + tz
+Out[30]: '2009-12-01T12:34:05-05:00'
+
+In [31]: datetime.now().isoformat('T') + tz
+Out[31]: '2013-04-27T07:36:16.915754-05:00'
+
+In [32]: datetime.now().isoformat('T') + tz
+Out[32]: '2013-04-27T07:36:58.402413-05:00'
+
+In [33]: dt = datetime.now().isoformat('T') + tz
+
+In [34]: dt
+Out[34]: '2013-04-27T07:37:36.640844-05:00'
+
+In [35]: 
+

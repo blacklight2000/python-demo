@@ -1,0 +1,23 @@
+In [1]: import dateutil.parser
+
+In [2]: d1 = '2008-09-03T20:56:35-04:00'
+
+In [3]: d2 = dateutil.parser.parse(d1)
+
+In [4]: d2
+Out[4]: datetime.datetime(2008, 9, 3, 20, 56, 35, tzinfo=tzoffset(None, -14400))
+
+In [5]: d2.year
+Out[5]: 2008
+
+In [6]: d2.tzinfo
+Out[6]: tzoffset(None, -14400)
+
+In [7]: d2.utcoffset()
+Out[7]: datetime.timedelta(-1, 72000)
+
+In [8]: d2.utcoffset().total_seconds()
+Out[8]: -14400.0
+
+In [9]: 
+

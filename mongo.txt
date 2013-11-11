@@ -1,0 +1,17 @@
+mortar run 
+
+mortar register mongodb-testcase-2
+
+mortar-data
+
+
+--------
+blog.mortardata.com
+
+
+
+a
+rtradata.com/signup
+
+MarchMadness - free for the first 40 hours $0.5/hour thereafter
+

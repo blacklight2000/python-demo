@@ -1,0 +1,13 @@
+In [1]: import re
+
+In [2]: files = os.listdir("./")
+
+In [3]: for file in files:
+    old = file
+    new = re.sub(r'\.rb','.py',old)
+    if (old != new):
+        os.rename(old,new)
+   ....:         
+
+
+
