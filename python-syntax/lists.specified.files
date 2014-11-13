@@ -1,0 +1,18 @@
+In [1]: import os
+
+In [2]: import re
+
+In [3]: files = os.dirlist('./')
+
+In [4]: for file in files:
+    score = re.search(r'.py',file)
+    if score: print file
+   ....:     
+email-n-attachments.py
+gmail-0-attachment.py
+gmail-1-attachment.py
+gmail-2-attachment.py
+gmail-n-attachments.py
+yahoo-0-attachment.py
+yahoo-1-attachment.py
+yahoo-n-attachments.py
