@@ -1,8 +1,8 @@
 */.*swpa
-send-email.0
+send-email.0/
 mongo.txt
-AWS
-data-structures
+AWS/
+data-structures/
 text.txt
 *.pyc
 
