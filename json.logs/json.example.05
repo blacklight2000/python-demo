@@ -1,0 +1,28 @@
+In [1]: k = {'x': {'a':1},'y': {'b':1},'z':{'a':1}}
+
+
+In [2]: for i in k:
+    print i,' ',k[i]
+   ....:     
+y   {'b': 1}
+x   {'a': 1}
+z   {'a': 1}
+
+
+In [3]: for i in k:
+    for j in k[i]:
+            print i,' ',j,' ',k[i][j]
+   ....:         
+y   b   1
+x   a   1
+z   a   1
+
+
+In [4]: for i in k:
+    for j in k[i]:
+        if j == 'a':
+            print i,' ',j,' ',k[i][j]
+   ....:             
+x   a   1
+z   a   1
+

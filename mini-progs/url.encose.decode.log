@@ -1,0 +1,14 @@
+In ]1]: import urllib2
+In [2]: str = 'http://linuxdud.com/asld/search?ome="jasj asd"&iwp="I know where you live"'
+In [3]: url = urllib2.quote(str.encode("utf8"))
+In [4]: print url
+http%3A//linuxdud.com/asld/search%3Fome%3D%22jasj%20asd%22%26iwp%3D%22I%20know%20where%20you%20live%22
+
+In [5]: str1 = urllib2.unquote(url)
+In [6]: print str1
+http://linuxdud.com/asld/search?ome="jasj asd"&iwp="I know where you live"
+
+In [7]: url = urllib2.quote(str.encode("utf8"))
+
+In [8]: print str1
+http://linuxdud.com/asld/search?ome="jasj asd"&iwp="I know where you live"

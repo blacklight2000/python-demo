@@ -1,6 +1,7 @@
 # Using subclassing to extend the capabilities of the list class to incorporate the standard
 pop, push, shift, unshift dynamic data structures
 
+# not worth implementing
 
 # push
 

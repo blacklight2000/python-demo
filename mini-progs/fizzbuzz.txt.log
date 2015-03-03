@@ -1,0 +1,34 @@
+def fb():
+    i=1
+    while True:
+        if i%15 == 0:
+            yield "FizzBuzz %s"  % i
+        elif i%3 == 0:
+            yield "Fizz %d" % i
+        elif i%5 == 0:
+            yield "Buzz %d" % i
+        else:
+            yield i
+        i=i+1
+
+f=fb()
+[f.next() for i in range(1,100)]
+time: 218 microseconds
+
+s
+def fb(n):
+    i=1
+    while i<n:
+        if i%15 == 0:
+            print "FizzBuzz %s"  % i
+        elif i%3 == 0:
+            print "Fizz %d" % i
+        elif i%5 == 0:
+            print "Buzz %d" % i
+        else:
+            print i
+        i=i+1
+
+fb(100)
+time: 750 microseconds
+
